@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: radial-gradient(circle, #302879, #9891ea, #1f1fee);
+    background-size: 300% 300%;
+    animation: gradientShift 15s ease infinite;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    text-align: center;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.creator-attribution {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(30, 30, 30, 0.7);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.creator-attribution a {
+    color: #bb86fc;
+    text-decoration: none;
+}
+
+.creator-attribution:hover {
+    background-color: rgba(30, 30, 30, 0.9);
+    transform: translateX(-50%) translateY(-5px);
+    box-shadow: 0 5px 15px rgba(187, 134, 252, 0.3);
+}
+
+.game-container {
+    background: linear-gradient(135deg, #2a2a2a, #1e1e1e);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.game-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #bb86fc, #03dac6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.cell {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    height: 100px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cell:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    background: #bb86fc;
+    color: #000;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background: #9965f4;
+    transform: translateY(-2px);
+}
+
+.status {
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
